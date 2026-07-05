@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haqdaar — Know what you are entitled to</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="phone-shell">
+
+  <section id="screen-welcome" class="screen active">
+    <div class="welcome-inner">
+      <div class="brand-logo">H</div>
+      <h1 class="brand-name" data-i18n="appName"></h1>
+      <p class="brand-tagline" data-i18n="tagline"></p>
+      <div class="lang-row">
+        <button class="chip lang-chip" data-lang="hi"></button>
+        <button class="chip lang-chip" data-lang="en"></button>
+        <button class="chip lang-chip" data-lang="mr"></button>
+      </div>
+      <button id="startBtn" class="btn-primary" data-i18n="start"></button>
+      <p class="hint" data-i18n="startHint"></p>
+    </div>
+  </section>
+
+  <section id="screen-profile" class="screen">
+    <div class="progress-bar"><div class="progress-fill" style="width:33%"></div></div>
+    <button class="back-chevron" data-back="screen-welcome">&larr;</button>
+    <h2 data-i18n="step2Title"></h2>
+
+    <div class="field">
+      <label data-i18n="ageLabel"></label>
+      <input type="number" id="ageInput" min="0" max="120" inputmode="numeric">
+    </div>
+
+    <div class="field">
+      <label data-i18n="stateLabel"></label>
+      <select id="stateInput"></select>
+    </div>
+
+    <div class="field">
+      <label data-i18n="incomeLabel"></label>
+      <div class="chip-row wrap" id="incomeChips"></div>
+    </div>
+
+    <div class="field">
+      <label data-i18n="occupationLabel"></label>
+      <div class="chip-row wrap" id="occupationChips"></div>
+    </div>
+
+    <button id="toStep3Btn" class="btn-primary" data-i18n="continue"></button>
+  </section>
+
+  <section id="screen-situation" class="screen">
+    <div class="progress-bar"><div class="progress-fill" style="width:66%"></div></div>
+    <button class="back-chevron" data-back="screen-profile">&larr;</button>
+    <h2 data-i18n="step3Title"></h2>
+    <p class="subtitle" data-i18n="step3Subtitle"></p>
+
+    <div class="chip-row wrap" id="situationChips"></div>
+
+    <p class="privacy-note" data-i18n="privacyNote"></p>
+    <button id="seeSchemesBtn" class="btn-primary" data-i18n="seeSchemes"></button>
+  </section>
+
+  <section id="screen-results" class="screen">
+    <div class="results-header">
+      <p class="results-count" id="resultsCount"></p>
+      <p class="results-amount" id="resultsAmount"></p>
+    </div>
+
+    <div id="schemeList" class="scheme-list"></div>
+    <button id="moreSchemesBtn" class="btn-more" hidden></button>
+
+    <p class="back-link"><a id="startOverLink" href="#" data-i18n="startOver"></a></p>
+  </section>
+
+  <section id="screen-detail" class="screen">
+    <button class="back-chevron" data-back="screen-results"><span>&larr;</span> <span data-i18n="back"></span></button>
+
+    <h2 id="detailName"></h2>
+
+    <div class="benefit-box">
+      <p class="label" data-i18n="youGet"></p>
+      <p id="detailBenefit" class="value"></p>
+    </div>
+
+    <h3 data-i18n="whyYouQualify"></h3>
+    <p id="detailWhy" class="body-text"></p>
+
+    <h3 data-i18n="documentsNeeded"></h3>
+    <p id="detailDocuments" class="body-text"></p>
+
+    <h3 data-i18n="howToApply"></h3>
+    <ol id="detailSteps" class="steps-list"></ol>
+
+    <p id="detailMeta" class="meta-tag"></p>
+
+    <div class="detail-actions">
+      <a id="applyNowBtn" class="btn-primary" target="_blank" rel="noopener" data-i18n="applyNow"></a>
+      <button id="saveBtn" class="btn-secondary" data-i18n="save"></button>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <p data-i18n="footerDisclaimer"></p>
+</footer>
+
+<script src="data/schemes.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/matcher.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
