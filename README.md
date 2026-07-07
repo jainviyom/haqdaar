@@ -1,3 +1,12 @@
+---
+title: Haqdaar
+emoji: 🇮🇳
+colorFrom: blue
+colorTo: yellow
+sdk: static
+pinned: false
+---
+
 # Haqdaar — "Which government schemes am I entitled to?"
 
 A fast, mobile-first, client-side-only web app for India. A 5-screen flow
