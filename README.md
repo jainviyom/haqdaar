@@ -1,6 +1,6 @@
 ---
 title: Haqdaar
-emoji: 🇮🇳
+emoji: 📋
 colorFrom: blue
 colorTo: yellow
 sdk: static
